@@ -5,8 +5,342 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Portfolio</title>
+	 <style>
+        #container {
+            border: 1px solid black;
+            padding: 10px;
+            margin-top: 5mm;
+            width: 5cm;
+        }
+
+        #titles {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1mm;
+        }
+
+            #titles h1 {
+                font-size: 10pt;
+                margin: 0;
+            }
+
+            #titles button {
+                font-size: 5pt;
+                margin-left: 1mm;
+            }
+
+        #titles1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1mm;
+        }
+
+            #titles1 h1 {
+                font-size: 10pt;
+                margin: 0;
+            }
+
+            #titles1 button {
+                font-size: 5pt;
+                margin-left: 1mm;
+            }
+
+        #subtitles {
+            display: none;
+            font-size: 5pt;
+        }
+
+        #subtitles1 {
+            display: none;
+            font-size: 5pt;
+        }
+
+        #img {
+            border: 1px solid black;
+            padding: 10px;
+            margin-top: 5mm;
+            margin-bottom: 1mm;
+            width: 5cm;
+            height: auto;
+        }
+
+        #tables {
+            display: none;
+            border-collapse: collapse;
+            margin-top: 2mm;
+            width: 100%;
+        }
+
+        #table1 {
+            display: none;
+            border-collapse: collapse;
+            margin-top: 2mm;
+            width: 100%;
+        }
+
+        #table2 {
+            display: none;
+            border-collapse: collapse;
+            margin-top: 2mm;
+        }
+        th,
+        td {
+            border: 1px solid black;
+            padding: 3px;
+        }
+
+        #content {
+           
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
-  <p>Hello, World!</p>
+    <div id="img">
+        <img src="./images/image.jpg" alt="이미지">
+    </div>
+    <div id="container">
+        <div id="titles">
+            <h1>제목입니다.</h1>
+            <button onclick="toggleSubtitles()">+</button>
+        </div>
+        <div id="subtitles">
+            <p onclick="showtable(1)">자기소개서</p>
+            <p onclick="showtable(2)">이력서</p>
+        </div>
+        <div id="titles1">
+            <h1>작업</h1>
+            <button onclick="toggleSubtitles1()">+</button>
+        </div>
+        <div id="subtitles1">
+            <p>3D모델링</p>
+            <p>유니티게임 개발</p>
+        </div>
+
+    </div>
+    <div class="content" id="content">
+        <table id="table1">
+            <tr>
+                <td rowspan="5" width="85" height="113">
+                    <img alt="사진" width="85" height="113" src="KakaoTalk_20230319_195745437.jpg">
+                </td>
+                <th colspan="9" height="50"><font size="5">이  력  서</font></th>
+            </tr>
+            <tr>
+                <th rowspan="3" width="85" height="70" bgcolor="D5D5D5">성   명</th>
+            </tr>
+            <tr>
+                <th colspan="2" bgcolor="D5D5D5">한   글</th>
+                <td width="90">송유성</td>
+                <th bgcolor="D5D5D5">생   년   월   일 </th>
+                <th colspan="2" width="80" bgcolor="D5D5D5">E-mail</th>
+            </tr>
+            <tr>
+                <th colspan="2" bgcolor="D5D5D5">한   문</th>
+                <td>***</td>
+                <td>****/**/**</td>
+                <td colspan="2">********@gmail.com</td>
+            </tr>
+            <tr>
+                <th colspan="2" width="50" bgcolor="D5D5D5">연   락   처</th>
+                <td colspan="2">010-****-****</td>
+                <th colspan="2" width="50" bgcolor="D5D5D5">긴급 연락처(핸드폰)</th>
+                <td colspan="2">010-****-****</td>
+            </tr>
+            <tr>
+                <th bgcolor="D5D5D5">현   주   소</th>
+                <td colspan="8">부산시 **구 ***로 ***번길 **</td>
+            </tr>
+        </table>
+        <table border="1" width="800" id="table2" style="display: none;">
+          
+                <tr>
+                    <td rowspan="5" width="85" height="113">
+                        <img alt="사진" width="85" height="113" src="KakaoTalk_20230319_195745437.jpg">
+                    </td>
+                    <th colspan="9" height="50"><font size="5">이  력  서</font></th>
+                </tr>
+                <tr>
+                    <th rowspan="3" width="85" height="70" bgcolor="D5D5D5">성   명</th>
+                </tr>
+                <tr>
+                    <th colspan="2" bgcolor="D5D5D5">한   글</th>
+                    <td width="90">송유성</td>
+                    <th bgcolor="D5D5D5">생   년   월   일 </th>
+                    <th colspan="2" width="80" bgcolor="D5D5D5">E-mail</th>
+                </tr>
+                <tr>
+                    <th colspan="2" bgcolor="D5D5D5">한   문</th>
+                    <td>***</td>
+                    <td>****/**/**</td>
+                    <td colspan="2">********@gmail.com</td>
+                </tr>
+                <tr>
+                    <th colspan="2" width="50" bgcolor="D5D5D5">연   락   처</th>
+                    <td colspan="2">010-****-****</td>
+                    <th colspan="2" width="50" bgcolor="D5D5D5">긴급 연락처(핸드폰)</th>
+                    <td colspan="2">010-****-****</td>
+                </tr>
+                <tr>
+                    <th bgcolor="D5D5D5">현   주   소</th>
+                    <td colspan="8">부산시 **구 ***로 ***번길 **</td>
+                </tr>
+          
+                <tr>
+                    <th colspan="6" bgcolor="D5D5D5">학   력   사   항</th>
+                </tr>
+                <tr>
+                    <th bgccolor="D5D5D5">학위과정</th>
+                    <th bgccolor="D5D5D5">기 간</th>
+                    <th bgccolor="D5D5D5">학 교 명</th>
+                    <th bgccolor="D5D5D5">전 공</th>
+                    <th bgccolor="D5D5D5">수료</th>
+                    <th bgccolor="D5D5D5">졸업</th>
+                </tr>
+                <tr>
+                    <td>전문학사</td>
+                    <td align="center">2020~2023</td>
+                    <td align="right">****대학교</td>
+                    <td>컴퓨터정보과</td>
+                    <td></td>
+                    <td align="center">○</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td align="center">2023~</td>
+                    <td align="right">동명대학교</td>
+                    <td>게임공학과</td>
+                    <td></td>
+                    <td align="center"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td align="center">~</td>
+                    <td align="right">대학원</td>
+                    <td></td>
+                    <td></td>
+                    <td align="center"></td>
+                </tr>
+                <tr>
+                    <th colspan="6" bgcolor="D5D5D5">전 공 경 력 사 항</th>
+                </tr>
+                <tr>
+                    <th width="180" bgcolor="D5D5D5">근무년월</th>
+                    <th width="200" bgcolor="D5D5D5">기 간</th>
+                    <th width="100" bgcolor="D5D5D5">근 무 처</th>
+                    <th width="100" bgcolor="D5D5D5">직 위</th>
+                    <th colspan="2" width="70" bgcolor="D5D5D5">자 격 증</th>
+                </tr>
+                <tr>
+                    <td align="center"> 년 &nbsp;&nbsp;&nbsp;개월</td>
+                    <td align="center"> ~ </td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td align="center"> 년 &nbsp;&nbsp;&nbsp;개월</td>
+                    <td align="center"> ~ </td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td align="center"> 년 &nbsp;&nbsp;&nbsp;개월</td>
+                    <td align="center"> ~ </td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td align="center"> 년 &nbsp;&nbsp;&nbsp;개월</td>
+                    <td align="center"> ~ </td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td align="center"> 년 &nbsp;&nbsp;&nbsp;개월</td>
+                    <td align="center"> ~ </td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td align="center"> 년 &nbsp;&nbsp;&nbsp;개월</td>
+                    <td align="center"> ~ </td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <th bgcolor="D5D5D5">참 고 사 항</th>
+                    <td colspan="5"></td>
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <p style="text-align:center">위 기재 사항은 틀림이 없습니다</p>
+                        <br />
+                        <br />
+                        <p style="text-align:center">
+                            20&nbsp;&nbsp;23&nbsp;&nbsp;년
+                            &nbsp;&nbsp;3&nbsp;&nbsp;월
+                            &nbsp;**&nbsp;일
+                        </p>
+                        <br />
+                        <br />
+                        <p style="text-align:right">(인)&nbsp;&nbsp;&nbsp;</p>
+                    </td>
+                </tr>
+        </table>
+    </div>
+        <script>
+            window.onload = function () {
+                var subtitles = document.querySelector("#subtitles");
+                var button = document.querySelector("#titles button");
+                button.innerText = "+";
+                button.onclick = function toggleSubtitles() {
+                    if (subtitles.style.display !== "block") {
+                        subtitles.style.display = "block";
+                        button.innerText = "-";
+                    } else {
+                        subtitles.style.display = "none";
+                        button.innerText = "+";
+                    }
+                };
+
+                var subtitles1 = document.querySelector("#subtitles1");
+                var button1 = document.querySelector("#titles1 button");
+                button1.innerText = "+";
+                button1.onclick = function toggleSubtitles1() {
+                    if (subtitles1.style.display !== "block") {
+                        subtitles1.style.display = "block";
+                        button1.innerText = "-";
+                    } else {
+                        subtitles1.style.display = "none";
+                        button1.innerText = "+";
+                    }
+                };   
+            };
+            function showtable(num) {
+                var content = document.querySelector("#content");
+                var tables = document.querySelector("#tables");
+                var table1 = document.querySelector("#table1");
+                var table2 = document.querySelector("#table2");
+
+                if (table1 && table2) { // table1, table2가 null이 아닌 경우에만 실행
+                    if (num === 1) {
+                        table1.style.display = "block";
+                        table2.style.display = "none";
+                    } else {
+                        table1.style.display = "none";
+                        table2.style.display = "block";
+                    }
+                }
+            }
+        </script>
 </body>
+
 </html>
