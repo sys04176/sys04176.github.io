@@ -100,6 +100,13 @@
             align-items: center;
             overflow: hidden;
         }
+        
+        iframe {
+            height: 100%;
+            width: 100%;
+            border: none;
+            overflow: hidden;
+        }
     </style>
 </head>
 
@@ -203,11 +210,6 @@
     if (xhr.readyState == 4 && xhr.status == 200) {
       var iframe = document.createElement("iframe");
       iframe.src = url;
-      iframe.style.width = "100%";
-      iframe.style.height = "100%";
-      iframe.style.border = none;
-      iframe.style.overflow = hidden;
-        
       document.getElementById("content").innerHTML = "";
       document.getElementById("content").appendChild(iframe);
     }
