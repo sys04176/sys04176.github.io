@@ -205,6 +205,9 @@
       iframe.src = url;
       iframe.style.width = "100%";
       iframe.style.height = "100%";
+      iframe.style.border = none;
+      iframe.style.overflow = hidden;
+        
       document.getElementById("content").innerHTML = "";
       document.getElementById("content").appendChild(iframe);
     }
