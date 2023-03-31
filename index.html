@@ -83,6 +83,7 @@
             border-collapse: collapse;
             margin-top: 2mm;
         }
+
         th,
         td {
             border: 1px solid black;
@@ -90,11 +91,11 @@
         }
 
         #content {
-           display: flex;
-           justify-content: center;
-           align-items: center;
-           height: auto
-       }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto
+        }
     </style>
 </head>
 
@@ -108,11 +109,13 @@
             <button onclick="toggleSubtitles()">+</button>
         </div>
         <div id="subtitles">
-		<nav>
-		<ul>
-			<li onclick="loadHTML('page1.html')">Page 1</li>
-            <p onclick="showtable(1)">자기소개서</p>
-            <li onclick="loadHTML('웹프로그래밍 2주차 과제/웹프로그래밍 과제.html')">이력서</p>
+            <nav>
+                <ul>
+                    <li onclick="loadHTML('page1.html')">Page 1</li>
+                    <p onclick="showtable(1)">자기소개서</p>
+                    <li onclick="loadHTML('웹프로그래밍 2주차 과제/웹프로그래밍 과제.html')">이력서</li>
+                </ul>
+            </nav>
         </div>
         <div id="titles1">
             <h1>작업</h1>
@@ -158,48 +161,48 @@
                 <td colspan="8">부산시 **구 ***로 ***번길 **</td>
             </tr>
         </table>
-       
-    </div>
-        <script>
-            window.onload = function () {
-                var subtitles = document.querySelector("#subtitles");
-                var button = document.querySelector("#titles button");
-                button.innerText = "+";
-                button.onclick = function toggleSubtitles() {
-                    if (subtitles.style.display !== "block") {
-                        subtitles.style.display = "block";
-                        button.innerText = "-";
-                    } else {
-                        subtitles.style.display = "none";
-                        button.innerText = "+";
-                    }
-                };
 
-                var subtitles1 = document.querySelector("#subtitles1");
-                var button1 = document.querySelector("#titles1 button");
-                button1.innerText = "+";
-                button1.onclick = function toggleSubtitles1() {
-                    if (subtitles1.style.display !== "block") {
-                        subtitles1.style.display = "block";
-                        button1.innerText = "-";
-                    } else {
-                        subtitles1.style.display = "none";
-                        button1.innerText = "+";
-                    }
-                };   
+    </div>
+    <script>
+        window.onload = function () {
+            var subtitles = document.querySelector("#subtitles");
+            var button = document.querySelector("#titles button");
+            button.innerText = "+";
+            button.onclick = function toggleSubtitles() {
+                if (subtitles.style.display !== "block") {
+                    subtitles.style.display = "block";
+                    button.innerText = "-";
+                } else {
+                    subtitles.style.display = "none";
+                    button.innerText = "+";
+                }
             };
-            
-          function loadHTML(url) {
-		  	var xhr = new XMLHttpRequest();
-			xhr.open("GET", url, true);
-			xhr.onreadystatechange = function() {
-				if (xhr.readyState == 4 && xhr.status == 200) {
-					document.getElementById("content").innerHTML = xhr.responseText;
-				}
-			}
-			xhr.send();
-		 }
-        </script>
+
+            var subtitles1 = document.querySelector("#subtitles1");
+            var button1 = document.querySelector("#titles1 button");
+            button1.innerText = "+";
+            button1.onclick = function toggleSubtitles1() {
+                if (subtitles1.style.display !== "block") {
+                    subtitles1.style.display = "block";
+                    button1.innerText = "-";
+                } else {
+                    subtitles1.style.display = "none";
+                    button1.innerText = "+";
+                }
+            };
+        };
+
+        function loadHTML(url) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", url, true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    document.getElementById("content").innerHTML = xhr.responseText;
+                }
+            }
+            xhr.send();
+        }
+    </script>
 </body>
 
 </html>
