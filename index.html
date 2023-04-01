@@ -196,15 +196,15 @@
             };
         };
 
-        function loadHTML(url) {
-  var xhr = new XMLHttpRequest();
+     var xhr = new XMLHttpRequest();
   xhr.open("GET", url, true);
   xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status == 200) {
-      var iframe = document.createElement("iframe");
-      iframe.src = url;
+      var object = document.createElement("object");
+      object.data = url;
+      object.type = "text/html";
       document.getElementById("content").innerHTML = "";
-      document.getElementById("content").appendChild(iframe);
+      document.getElementById("content").appendChild(object);
     }
   };
   xhr.send();
