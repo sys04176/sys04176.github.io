@@ -92,7 +92,8 @@
 	    
         #content {       
             justify-content: center;
-		
+	    width: 400px;
+	    height: 200px;
        }
       
     </style>
@@ -200,12 +201,6 @@ function loadHTML(url) {
       object.type = "text/html";
       document.getElementById("content").innerHTML = "";
       document.getElementById("content").appendChild(object);
-	    
-    object.onload = function() {
-        var contentWidth = object.contentDocument.body.scrollWidth;
-        var contentHeight = object.contentDocument.body.scrollHeight;
-        object.style.width = contentWidth + "px";
-        object.style.height = contentHeight + "px";
     }
   };
   xhr.send();
