@@ -7,7 +7,8 @@
         #container {
             position: relative;
             width: 1080px;
-	    
+	    width: 1080px;
+  	    height: 1000px;
             margin: 0 auto;
             clear: both;
         }
@@ -64,42 +65,14 @@
             width: 5cm;
             height: auto;
         }
-
-        #tables {
-            display: none;
-            border-collapse: collapse;
-            margin-top: 2mm;
-            width: 100%;
-        }
-
-        #table1 {
-            display: none;
-            border-collapse: collapse;
-            margin-top: 2mm;
-            width: 100%;
-        }
-
-        #table2 {
-            display: none;
-            border-collapse: collapse;
-            margin-top: 2mm;
-        }
-
-        th,
-        td {
-            border: 1px solid black;
-            padding: 3px;
-	}
-	    
+    
         #content {       
             position: absolute;
-  	    width: auto;
-  	    height: auto;
-  	    top: 0;
- 	    left: 0;
-  	    bottom: 0;
-  	    right: 0;
-  	    margin: auto;
+  	    top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 400px;
        }
       
     </style>
@@ -132,41 +105,7 @@
             <p>3D모델링</p>
             <p>유니티게임 개발</p>
         </div>
-	<div class="content" id="content">
-        	<table id="table1">
-            	<tr>
-                <td rowspan="5" width="85" height="113">
-                    <img alt="사진" width="85" height="113" src="KakaoTalk_20230319_195745437.jpg">
-                </td>
-                <th colspan="9" height="50"><font size="5">이  력  서</font></th>
-            	</tr>
-            	<tr>
-                <th rowspan="3" width="85" height="70" bgcolor="D5D5D5">성   명</th>
-            	</tr>
-            	<tr>
-                <th colspan="2" bgcolor="D5D5D5">한   글</th>
-                <td width="90">송유성</td>
-                <th bgcolor="D5D5D5">생   년   월   일 </th>
-                <th colspan="2" width="80" bgcolor="D5D5D5">E-mail</th>
-            </tr>
-            <tr>
-                <th colspan="2" bgcolor="D5D5D5">한   문</th>
-                <td>***</td>
-                <td>****/**/**</td>
-                <td colspan="2">********@gmail.com</td>
-            </tr>
-            <tr>
-                <th colspan="2" width="50" bgcolor="D5D5D5">연   락   처</th>
-                <td colspan="2">010-****-****</td>
-                <th colspan="2" width="50" bgcolor="D5D5D5">긴급 연락처(핸드폰)</th>
-                <td colspan="2">010-****-****</td>
-            </tr>
-            <tr>
-                <th bgcolor="D5D5D5">현   주   소</th>
-                <td colspan="8">부산시 **구 ***로 ***번길 **</td>
-            </tr>
-        </table>
-	</div>
+	<div class="content" id="content"></div>
     </div>
     <script>
         window.onload = function () {
