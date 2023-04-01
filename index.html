@@ -92,15 +92,9 @@
 	    
         #content {       
             justify-content: center;
+		
        }
-        
-        iframe {
-            height: 100%;
-            width: 100%;
-            border: none;
-	    align: middle;
-            overflow: hidden;
-        }
+      
     </style>
 </head>
 
@@ -206,6 +200,12 @@ function loadHTML(url) {
       object.type = "text/html";
       document.getElementById("content").innerHTML = "";
       document.getElementById("content").appendChild(object);
+	    
+    object.onload = function() {
+        var contentWidth = object.contentDocument.body.scrollWidth;
+        var contentHeight = object.contentDocument.body.scrollHeight;
+        object.style.width = contentWidth + "px";
+        object.style.height = contentHeight + "px";
     }
   };
   xhr.send();
