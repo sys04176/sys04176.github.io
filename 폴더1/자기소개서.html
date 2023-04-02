@@ -11,16 +11,17 @@
         body{
             width: 800px;
         }
-        gameimg{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            grid-gap: 10px;
+        .iframe-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
-        gameimg img{
-            width:100%;
-            height: auto;
-        }
+
+    .iframe-wrapper iframe {
+        width: 80%;
+        height: 80%;
+    }
     </style>
 </head>
 <body>
@@ -39,15 +40,15 @@
        </div>
    </div>
    <div class="favorite">
-       <iframe width="560" height="315" src="https://www.youtube.com/embed/playlist?list=PL6usA5H8iz1QxU_QCkei2wZha5Y5tknFD" frameborder="0" allow="accelerometer; autoplay;encrypted-media" allowfullscreen></iframe>
+       <div class="iframe-wrapper">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/playlist?list=PL6usA5H8iz1QxU_QCkei2wZha5Y5tknFD" frameborder="0" allow="accelerometer; autoplay;encrypted-media" allowfullscreen></iframe>
+       </div>
        <div class="game">
            <h1 align="center">해본 게임</h1>
-           <div id="gameimg">
-                   <img src="https://github.com/sys04176/sys04176.github.io/raw/main/img/엔더 릴리즈.png" />
-                   <img src="https://github.com/sys04176/sys04176.github.io/raw/main/img/오리.png" />
-                   <img src="https://github.com/sys04176/sys04176.github.io/raw/main/img/엘든링.png" />
-                   <img src="https://github.com/sys04176/sys04176.github.io/raw/main/img/세키로.png" />
-           </div>
+           <img width="500" height="auto" src="https://github.com/sys04176/sys04176.github.io/raw/main/img/엔더 릴리즈.png" />
+           <img width="500" height="auto" src="https://github.com/sys04176/sys04176.github.io/raw/main/img/오리.png" />
+           <img width="500" height="auto" src="https://github.com/sys04176/sys04176.github.io/raw/main/img/엘든링.png" />
+           <img width="500" height="auto" src="https://github.com/sys04176/sys04176.github.io/raw/main/img/세키로.png" />
        </div>
    </div>
     <div class="MyLink">
