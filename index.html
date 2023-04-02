@@ -4,14 +4,19 @@
 <head>
     <title>Test Page</title>
     <style>
-        #container {
-            position: relative;
-            width: 1080px;
-	    width: 1080px;
-  	    height: 1000px;
-            margin: 0 auto;
-            clear: both;
-        }
+	body, html {
+		height: 100%;
+		margin: 0;
+		overflow: hidden; /* 스크롤 비활성화 */
+	}
+	    
+	#container {
+		position: relative;
+		width: 1080px;
+		height: 1000px;
+		margin: 0 auto;
+		clear: both;
+	}
 
         #titles {
             display: flex;
@@ -67,14 +72,17 @@
         }
     
         #content {       
-            position: relative;
+	position: relative;
 	    width: auto;
-            height: auto;
-       }
+	    height: auto;
+	    overflow: hidden;
+	}
 	    
 	#content object {
- 	  width: 100%;
-	  height: 100%;
+ 	 	width: 100%;
+		height: 100%;
+		border: none;
+		overflow: hidden;
 	}
       
     </style>
