@@ -22,6 +22,7 @@
        }
 
         #menu {
+            float: left;
             border: 1px solid black;
             display: inline-block;
             width: 185px;
@@ -73,6 +74,7 @@
         }
 
         #img {
+            float: left;
             border: 1px solid black;
             padding: 10px;
             margin-top: 20px;
@@ -99,18 +101,22 @@
             border: none;
             overflow: hidden;
         }
+        
+        #menu-img {
+            display: flex;
+            align-items: center;
+        }
     </style>
 </head>
 
 <body>
 
     <div id="container">
+       <div id="menu-img">
         <div id="img">
             <img src="./images/image.jpg" alt="이미지">
         </div>
         <div id="menu">
-
-
             <div id="titles">
                 <h1>제목입니다.</h1>
                 <button onclick="toggleSubtitles()">+</button>
@@ -132,6 +138,7 @@
                 <p>3D모델링</p>
                 <p>유니티게임 개발</p>
             </div>
+        </div>
         </div>
         <div class="content" id="content"></div>
     </div>
