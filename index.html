@@ -14,7 +14,14 @@
         html{
             background-color: black;
         }
-        
+        #home {
+            display: block;
+        }
+
+        .hide {
+            display: none;
+        }
+
         #container {
             position: relative;
             width: 1500px;
@@ -120,24 +127,21 @@
 </head>
 
 <body>
-
+    <header></header>
     <div id="container">
        <div id="menu-img">
         <div id="img">
             <img width="170" height="120" src="https://github.com/sys04176/sys04176.github.io/raw/main/img/KakaoTalk_20230402_155241672.jpg" alt="이미지">
         </div>
-        <div id="menu">
+        <nav id="menu">
+            <ul>
             <div id="titles">
                 <h1>제목입니다.</h1>
                 <button onclick="toggleSubtitles()">+</button>
             </div>
-            <div id="subtitles">
-                <nav>
-                    <ul>
-                        <li onclick="loadHTML('폴더1/자기소개서.html')">자기소개서</li>
-                        <li onclick="loadHTML('웹프로그래밍 2주차 과제/웹프로그래밍 과제.html')">이력서</li>
-                    </ul>
-                </nav>
+            <div id="subtitles">        
+                <li onclick="loadHTML('폴더1/자기소개서.html')">자기소개서</li>
+                <li onclick="loadHTML('웹프로그래밍 2주차 과제/웹프로그래밍 과제.html')">이력서</li>  
             </div>
             <div id="titles1">
                 <h1>작업</h1>
@@ -146,10 +150,17 @@
             <div id="subtitles1">
                 <p>3D모델링</p>
                 <p>유니티게임 개발</p>
+                </div>
+            </ul>
+        </nav>
+        <main class="content" id="content">
+            <div id="home">
+                <h1>어서오세요! 게임 좋아하고 노래를 좋아하는 송유성입니다. 취미로 개발도 하긴 하는데 아직 미흡...</h1>
+                <img  width= "200" height= "auto" src="https://github.com/sys04176/sys04176.github.io/raw/main/img/KakaoTalk_20230404_004257236" alt="이미지">
+                <img width= "200" height= "auto" src="https://github.com/sys04176/sys04176.github.io/raw/main/img/언리얼체스" alt="이미지">
+                <video autoplay width= "auto" height= "200" src="https://github.com/sys04176/sys04176.github.io/raw/main/img/KakaoTalk_20230404_004313609" alt="동영상"></video>
             </div>
-        </div>
-        </div>
-        <div class="content" id="content"></div>
+        </main>
     </div>
     <script>
         window.onload = function() {
@@ -190,6 +201,9 @@
                     object.type = "text/html";
                     document.getElementById("content").innerHTML = "";
                     document.getElementById("content").appendChild(object);
+                    
+                    var home = document.getElementById("home");
+                    home.classList.add("hide");
                 }
             };
             xhr.send();
