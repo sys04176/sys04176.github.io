@@ -13,14 +13,7 @@
         html{
             background-color: black;
         }
-        #home {
-            display: block;
-        }
-
-        .hide {
-            display: none;
-        }
-
+        
         #container {
             position: relative;
             width: 1500px;
@@ -29,7 +22,7 @@
             clear: both;
             text-align: center;
             display: flex;
-       }
+        }
 
         #menu {
             background-color: lightgray;
@@ -37,7 +30,6 @@
             border: none;
             width: 185px;
             height: 300px;
-            padding: 10px;
         }
 
         #titles {
@@ -67,7 +59,7 @@
 
         #titles1 button {
             font-size: 5pt;
-            margin-left: 4px;
+            margin-left: 1mm;
         }
 
         #subtitles {
@@ -117,11 +109,6 @@
             margin-left:100px;
             margin-top: 70px;
         }
-        
-        li {
-           margin: 0;
-           padding: 0;
-        }
     </style>
 </head>
 
@@ -131,8 +118,7 @@
         <div id="img">
             <img width="170" height="120" src="https://github.com/sys04176/sys04176.github.io/raw/main/img/KakaoTalk_20230402_155241672.jpg" alt="이미지">
         </div>
-        <div id="menu">
-            
+        <div id="menu">   
             <div id="titles">
                 <h1>제목입니다.</h1>
                 <button onclick="toggleSubtitles()">+</button>
@@ -145,7 +131,6 @@
                     </ul>
                 </nav>
             </div>
-           </div>
             <div id="titles1">
                 <h1>작업</h1>
                 <button onclick="toggleSubtitles1()">+</button>
@@ -153,9 +138,9 @@
             <div id="subtitles1">
                 <p>3D모델링</p>
                 <p>유니티게임 개발</p>
-                </div>
-           
-        </nav>
+           </div>
+        </div>
+        </div>
         <content class="content" id="content"></content>
     </div>
     <script>
