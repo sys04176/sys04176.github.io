@@ -41,6 +41,7 @@
   }
   
   .content {
+    width: 900px;
     height: auto;
   }
 }
