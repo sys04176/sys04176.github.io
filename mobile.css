@@ -1,4 +1,5 @@
- @media screen and (max-width: 540px) {
+style{
+@media screen and (max-width: 540px) {
   /* 화면 너비가 540px 이하일 때 적용될 스타일 */
   .container {
     width: 90%;
@@ -14,18 +15,19 @@
   }
 }
 
-@media screen and (max-width: 1023px){
-  /* 화면 너비가  1023px 이하일 때 적용될 스타일 */
-  .container {
-    width: 70%;
-  }
+  @media screen and (max-width: 1023px){
+   /* 화면 너비가  1023px 이하일 때 적용될 스타일 */
+   .container {
+     width: 70%;
+   }
   
-  .menu-img {
-    width: 250px;
-  }
+   .menu-img {
+     width: 250px;
+   }
   
-  .content {
-    width: 70%;
-    height: auto;
-  }
+   .content {
+     width: 70%;
+     height: auto;
+   }
+ }
 }
