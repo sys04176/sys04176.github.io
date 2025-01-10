@@ -1,4 +1,4 @@
-style{
+<style>
 @media screen and (max-width: 540px) {
   /* 화면 너비가 540px 이하일 때 적용될 스타일 */
   .container {
@@ -29,5 +29,5 @@ style{
      width: 70%;
      height: auto;
    }
- }
-}
+  }
+</style>
