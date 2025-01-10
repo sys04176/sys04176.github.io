@@ -1,10 +1,93 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <style>
-    </style>
-  </head>
-  <body>
-    <h1>Unity</h1>
-  </body>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    
+  <style>
+    table {
+      margin: auto;
+      width: 700px;
+      border-radius: 5px;
+      border-collapse: collapse;
+      border-top: none;
+    }
+
+  .header {
+    background-color: #dae7ff;
+    text-align: center;
+}
+
+.table td,
+.table th {
+    border-bottom: 1px #D3D3D3 solid;
+    height: 30px;
+    font-size: 14px;
+}
+
+.num {
+    width: 50px;
+}
+
+.title {
+    width: 500px;
+}
+
+.body {
+    text-align: center;
+}
+
+.body .title {
+    text-align: left;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    border: 0;
+    outline: 1.5px #4488f4 solid;
+    border-radius: 5px;
+    padding-left: 10px;
+    background-color: #a4c7ff;
+}
+
+button:active {
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 5px;
+    outline: 1.5px #1b4c9b solid;
+    padding-left: 10px;
+    background-color: #4488f4;
+}
+  </style>
+</head>
+
+<body>
+    <table class="table">
+        <tr>
+            <td colspan="2">
+                <h2>게시판</h2>
+            </td>
+        </tr>
+        <tr class="header">
+            <td class="num">번호</td>
+            <td class="title">제목</td>
+            <td>작성자</td>
+            <td>작성날짜</td>
+        </tr>
+<!--         <script src="../JS/board.js"></script> -->
+    </table>
+    <br>
+    <table>
+        <tr>
+            <td><button>글쓰기</button></td>
+        </tr>
+    </table>
+</body>
+
 </html>
