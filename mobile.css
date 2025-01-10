@@ -1,5 +1,5 @@
-@media screen and (max-width: 768px) {
-  /* 화면 너비가 768px 이하일 때 적용될 스타일 */
+ @media screen and (max-width: 540px) {
+  /* 화면 너비가 540px 이하일 때 적용될 스타일 */
   .container {
     width: 90%;
   }
@@ -14,8 +14,8 @@
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1200px) {
-  /* 화면 너비가 769px 이상 1200px 이하일 때 적용될 스타일 */
+@media screen and (max-width: 1023px){
+  /* 화면 너비가  1023px 이하일 때 적용될 스타일 */
   .container {
     width: 70%;
   }
@@ -26,22 +26,6 @@
   
   .content {
     width: 70%;
-    height: auto;
-  }
-}
-
-@media screen and (min-width: 1201px) {
-  /* 화면 너비가 1201px 이상일 때 적용될 스타일 */
-  .container {
-    width: 60%;
-  }
-  
-  .menu-img {
-    width: 350px;
-  }
-  
-  .content {
-    width: 900px;
     height: auto;
   }
 }
